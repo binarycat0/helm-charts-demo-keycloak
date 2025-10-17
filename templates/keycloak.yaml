@@ -76,14 +76,14 @@ spec:
             - name: 'KC_DB_URL_HOST'
               value: {{ .Values.db.host }}
             - name: 'KC_DB_URL_PORT'
-              value: {{ .Values.db.port }}
+              value: {{ .Values.db.port | quote }}
             - name: 'KC_DB_URL_DATABASE'
               value: {{ .Values.db.name }}
             # In a production environment, use a secret to store username and password to the database
             - name: 'KC_DB_USERNAME'
               value: {{ .Values.db.username }}
             - name: 'KC_DB_PASSWORD'
-              value: {{ .Values.db.passsord }}
+              value: {{ .Values.db.passsword }}
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}
