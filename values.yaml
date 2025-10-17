@@ -1,0 +1,20 @@
+image:
+  repository: quay.io/keycloak/keycloak
+  tag: 26.4.1
+  pullPolicy: IfNotPresent
+
+args: [ "start" ]
+
+appLabel: keycloak
+
+service:
+  port: 8080
+  name: keycloak
+  kind: StatefulSet
+  replicas: 1
+
+db:
+  host: "postgres"
+  name: "KEYCLOAK"
+  user: "keycloak"
+  pass: "keycloak"
