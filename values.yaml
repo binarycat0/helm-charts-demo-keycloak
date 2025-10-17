@@ -18,4 +18,4 @@ db:
   port: 5432
   name: "KEYCLOAK"
   username: "keycloak"
-  passsord: "keycloak"
+  passsword: "keycloak"
