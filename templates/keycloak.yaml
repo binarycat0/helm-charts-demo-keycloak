@@ -14,22 +14,10 @@ spec:
     app: {{ .Values.appLabel}}
   type: ClusterIP
 ---
-apiVersion: v1
-kind: Service
-metadata:
-  labels:
-    app: {{ .Values.appLabel}}
-  name: {{ .Values.service.name }}
-spec:
-  selector:
-    app: {{ .Values.appLabel}}
-  clusterIP: None
-  type: ClusterIP
----
 apiVersion: apps/v1
 # Use a stateful setup to ensure that for a rolling update Pods are restarted with a rolling strategy one-by-one.
 # This prevents losing in-memory information stored redundantly in two Pods.
-kind: {{ .Values.kind }}
+kind: {{ .Values.service.kind }}
 metadata:
   name: {{ .Values.service.name }}
   labels:
