@@ -15,6 +15,7 @@ service:
 
 db:
   host: "postgres"
+  port: 5432
   name: "KEYCLOAK"
-  user: "keycloak"
-  pass: "keycloak"
+  username: "keycloak"
+  passsord: "keycloak"
