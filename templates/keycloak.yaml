@@ -37,7 +37,8 @@ spec:
       containers:
         - name: {{ .Values.service.name }}
           image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
-          args: {{ .Values.args }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          args: [ "start" ]
           env:
             - name: KC_BOOTSTRAP_ADMIN_USERNAME
               value: "admin"
@@ -85,7 +86,7 @@ spec:
               value: {{ .Values.db.passsord }}
           ports:
             - name: http
-              containerPort: {{ .Values.service.port | default 8080 }}
+              containerPort: {{ .Values.service.port }}
             - name: jgroups
               containerPort: 7800
             - name: jgroups-fd
