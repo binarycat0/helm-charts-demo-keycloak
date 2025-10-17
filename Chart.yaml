@@ -1,0 +1,16 @@
+apiVersion: v2
+name: binarycat-keycloak
+description: Public Keycloak Helm Chart
+type: application
+version: 1.0.1
+appVersion: "1.0.1"
+keywords:
+  - polaris
+  - apache
+  - iceberg
+  - postgres
+home: https://github.com/binarycat0/helm-charts-demo-keycloak
+sources:
+  - https://github.com/binarycat0/helm-charts-demo-keycloak
+maintainers:
+  - name: binarycat0
