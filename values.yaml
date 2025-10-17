@@ -10,7 +10,7 @@ appLabel: keycloak
 service:
   port: 8080
   name: keycloak
-  kind: StatefulSet
+  kind: Deployment
   replicas: 1
 
 db:
