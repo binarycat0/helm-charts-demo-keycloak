@@ -34,6 +34,10 @@ spec:
       labels:
         app: {{ .Values.appLabel}}
     spec:
+      initContainers:
+        - name: wait-for-db
+          image: busybox:1.35
+          command: ['sh', '-c', 'until nc -z {{ .Values.db.host }} {{ .Values.db.port }}; do echo waiting for db; sleep 2; done;']
       containers:
         - name: {{ .Values.service.name }}
           image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
