@@ -84,6 +84,12 @@ spec:
               value: {{ .Values.db.username }}
             - name: 'KC_DB_PASSWORD'
               value: {{ .Values.db.passsword }}
+            {{- if .Values.extraEnv }}
+            {{- range .Values.extraEnv }}
+            - name: {{ .name }}
+              value: {{ .value }}
+            {{- end }}
+            {{- end }}
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}
