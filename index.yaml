@@ -3,9 +3,9 @@ entries:
   binarycat-keycloak:
   - apiVersion: v2
     appVersion: 1.0.2
-    created: "2025-10-18T09:22:28.69022806Z"
+    created: "2025-10-18T09:37:06.981380351Z"
     description: Public Keycloak Helm Chart
-    digest: 00768942405c477070c075252bcbe029ddb185ebdc01fcb77ec08b6f3f20c719
+    digest: 2b4d22d296b5d8f3211c86e9826f4f15cdb0c8fe5868c625a7f7dd6b4c3bc471
     home: https://github.com/binarycat0/helm-charts-demo-keycloak
     keywords:
     - polaris
@@ -21,4 +21,4 @@ entries:
     urls:
     - https://binarycat0.github.io/helm-charts-demo-keycloak/binarycat-keycloak-1.0.2.tgz
     version: 1.0.2
-generated: "2025-10-18T09:22:28.68914278Z"
+generated: "2025-10-18T09:37:06.980593503Z"
